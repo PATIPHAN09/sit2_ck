@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auto-Submit Button with Alert</title>
+</head>
+<body>
+    <form id="myForm" action="submit.php" method="post">
+        <input type="text" name="data" value="Some data">
+        <input type="submit" id="submitButton" value="Submit">
+    </form>
+
+    <script>
+        // Function to auto-submit the form and show an alert message
+        function autoSubmitForm() {
+            document.getElementById('myForm').submit();
+            alert("Form submitted!");
+        }
+
+        // Set the interval (in milliseconds) for auto-submit (e.g., every 5 minutes)
+        const intervalInMinutes = 5;
+        const intervalInMilliseconds = intervalInMinutes * 60 * 1000;
+
+        // Trigger auto-submit at regular intervals
+        setInterval(autoSubmitForm, intervalInMilliseconds);
+    </script>
+</body>
+</html>
